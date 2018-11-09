@@ -5,11 +5,32 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+  <nav>
+<%= link_to "all post", animals_path %>
+      <% if user_signed_in? %>
+      <%= link_to "Add Post", new_animal_path %>
+      <%= link_to current_user.email, user_path(current_user) %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log in", new_user_session_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+    </nav>
+
+
+  <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+    <%= yield %></div>
   </body>
 </html>

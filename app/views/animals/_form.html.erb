@@ -1,0 +1,70 @@
+<%= form_for @animal do |f| %>
+<div>
+<%= f.label :title %>
+</div>
+<div>
+<%= f.text_field :title  , required: true %>
+</div>
+<div>
+<%= f.label :description %>
+</div>
+<div>
+<%= f.text_area :description , required: true  %>
+</div>
+<div>
+<%= f.label :image %>
+</div>
+<div>
+<%= f.text_field :image  , required: true %>
+</div>
+
+<div>
+<%= f.label :animal_type %>
+</div>
+<div>
+<%= f.text_field :animal_type  , required: true %>
+</div>
+
+
+    <%= f.label :gender %><br />
+    <%= f.label :gender, "Female", :value => "female"  %>
+    <%= f.radio_button :gender, "female"  %>
+    <%= f.label :gender, "Male", :value => "male" %>
+    <%= f.radio_button :gender, "male" , :checked => "female" %>
+  </div>
+
+
+<div>
+<%= f.label :dob %>
+</div>
+<div>
+<%= f.text_field :dob  , required: true %>
+</div>
+
+<div>
+<%= f.label :city %>
+</div>
+<div>
+<%= f.text_field :city  , required: true %>
+</div>
+
+<div>
+<%= f.label :location %>
+</div>
+<div>
+<%= f.text_field :location  , required: true %>
+</div>
+
+
+
+
+
+
+
+
+
+<div>
+<%= f.submit %>
+</div>
+<% end %>
+

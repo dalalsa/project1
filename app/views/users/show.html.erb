@@ -1,0 +1,6 @@
+<h2><%= @user.email %></h2>
+<h3>All Posts by this user</h3>
+<% @user.animals.each do |animal| %>
+<p><%= link_to animal.title, animal_path(animal) %>  </p>
+ 
+<% end %>

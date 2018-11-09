@@ -1,0 +1,12 @@
+<h1>Animals#index</h1>
+<p>Find me in app/views/animals/index.html.erb</p>
+          <h3 class=""><%= link_to("add new", "/new_animal/missing" ) %></h3>
+
+  <% @animals.each do |animal| %>
+
+          <h3 class=""><%= link_to(animal.title, animal_path(animal)) %></h3>
+         
+      
+  <% end %>
+
+<%= console %>
