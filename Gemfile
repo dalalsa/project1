@@ -5,7 +5,6 @@ ruby '2.5.3'
 gem "devise"
 
 gem 'pry'
-gem 'materialize-sass'
 gem 'jquery-rails'
 
 
