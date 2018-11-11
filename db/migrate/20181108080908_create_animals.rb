@@ -10,6 +10,7 @@ class CreateAnimals < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :location
       t.string :status
+      t.string :microchip
       t.integer :user_id
 
       t.timestamps

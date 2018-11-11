@@ -14,23 +14,74 @@
   </head>
 
   <body>
-  <div class="container">
+  
   <nav>
-<%= link_to "all post", animals_path %>
-      <% if user_signed_in? %>
-      <%= link_to "Add Post", new_animal_path %>
-      <%= link_to current_user.email, user_path(current_user) %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    <div class="nav-wrapper #80cbc4 teal lighten-3">
+      <a href="#!" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+      
+     <li> <%= link_to "all animals", animals_path %></li>
+      <li><% if user_signed_in? %></li>
+      <li><%= link_to "Add Post", new_animal_path %></li>
+      <li><%= link_to current_user.email, user_path(current_user) %></li>
+       <li> <%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <%= link_to "Log in", new_user_session_path %>
-        <%= link_to "Sign Up", new_user_registration_path %>
+       <li> <%= link_to "Log in", new_user_session_path %></li>
+       <li> <%= link_to "Sign Up", new_user_registration_path %></li>
       <% end %>
-    </nav>
+     
+      </ul>
+    </div>
+<%= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    <div class="input-group-btn">  
+      <%= button_tag "search", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+  </div>  
+<% end %>
 
 
+
+
+  </nav>
+ 
   <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<div class="container  lighten-2">
+    <%= yield %>
+  </div>
 
-    <%= yield %></div>
+    <footer class="page-footer #80cbc4 teal lighten-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+   
+
+
+
+    
   </body>
 </html>

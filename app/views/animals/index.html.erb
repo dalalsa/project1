@@ -1,12 +1,33 @@
 <h1>Animals#index</h1>
 <p>Find me in app/views/animals/index.html.erb</p>
+ <div class ="row #84ffff cyan accent-1">
           <h3 class=""><%= link_to("add new", "/new_animal/missing" ) %></h3>
-
-  <% @animals.each do |animal| %>
-
-          <h3 class=""><%= link_to(animal.title, animal_path(animal)) %></h3>
-         
-      
+</div>
+ 
+<% @animals.in_groups_of(3, false).each do |group| %>
+     
+<div class="row">
+    
+ <% group.each do |animal| %>
+ <div class="col s4">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag animal.image %>
+          <span class="card-title"><%= animal.title %></span>
+        </div>
+        <div class="card-content">
+          <p> <%= animal.description %></p>
+          <p> in <%= animal.city %></p>
+          <p>  <%= animal.animal_type %>, <%= animal.gender %></p>
+        </div>
+        <div class="card-action">
+          <a href=<%= animal_path(animal) %>>more</a>
+        </div>
+      </div>
+       </div>
+      <% end %>
+   
+  </div>  
   <% end %>
 
-<%= console %>
+  

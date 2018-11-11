@@ -1,9 +1,49 @@
 <h1>Animals#show</h1>
 <p>Find me in app/views/animals/show.html.erb</p>
- <%= @animal.title %>
- <div><%= image_tag @animal.image %></div>
- <p>Type: <%= @animal.animal_type %></p>
- <p>Gender: <%= @animal.gender %></p>
+
 
       
-         
+    <div class="row">
+
+      <div class="col s4">
+       <div class="card small">
+        <div class="card-content">
+      
+       <%= @animal.title %>
+ <div>
+ <%= image_tag @animal.image , :size => "260x180"%></div>
+ <p>Type: <%= @animal.animal_type %></p>
+ <p>Gender: <%= @animal.gender %></p>
+ <p>Age: <%= @animal.dob %></p>
+
+      </div>
+      </div>
+      </div>
+      <div class="col s8">
+      colum 2
+        <!-- Promo Content 2 goes here -->
+   <section class="section comments">
+    <div class="container">
+        <h2 class="subtitle is-5"><strong><%= @animal.comments.count %></strong> Comments</h2>
+        <%#= show the user and comment content from comment.html  %>
+        <%= render @animal.comments %>
+        <div class="comment-form">
+            <hr />
+            <p class="subtitle is-3">Leave a reply</p>
+             <%= render 'comments/form' %>
+        </div>
+    </div>
+</section> 
+
+</div> 
+   </div>
+    </div>
+    <div class="row">
+
+      <div class="col s6">
+          <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Missing</a>
+                    <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Found</a>
+                    <a class="waves-effect waves-light btn"><i class="material-icons left"></i>For Adoption</a>
+
+           </div>
+    </div>

@@ -1,6 +1,11 @@
-<h2><%= @user.email %></h2>
-<h3>All Posts by this user</h3>
+
+<div class="row">
+      <div class="col s12">user profile here
+      <p><%= @user.email %></p></div>
+        <div class="col s4">empty</div>
+      <div class="col s6">here is animals
+      <h3>All Posts by this user</h3>
 <% @user.animals.each do |animal| %>
-<p><%= link_to animal.title, animal_path(animal) %>  </p>
- 
-<% end %>
+<p><%= link_to animal.title, animal_path(animal) %>  </p> 
+<% end %></div>
+</div>
