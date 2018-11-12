@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/new_animal/:search", to: "animals#new"
   root "pages#home"
   get "/search" => "pages#search", :as => "search_page"
+  put "/animals/:id/adopted", to: "animals#adopted"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

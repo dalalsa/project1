@@ -18,6 +18,22 @@ class AnimalsController < ApplicationController
   end
 
   def edit
+    @animal = Animal.find_by(id: params[:id])
+  end
+
+  def adopted
+    # Find the animal with the id of params[:id]
+ @animal = Animal.find_by(id: params[:id])
+    @animal.update(status: "adopted")
+    @animal.save
+    # Change the status to "Adopted" on that animal
+
+    # Save the animal
+
+  end
+
+  def update
+   
   end
 
   private

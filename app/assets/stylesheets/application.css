@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: relative;
+  opacity: 1;
+  pointer-events: inherit;
+  width: auto;
+}

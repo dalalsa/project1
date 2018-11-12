@@ -10,9 +10,23 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require rails-ujs
 //= require activestorage
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  console.log("jquery connected!");
+  // $("select").formSelect();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".dropdown-trigger");
+  var instances = M.Dropdown.init(elems);
+});
+document.addEventListener("turbolinks:load", function() {
+  var elems = document.querySelectorAll("select");
+  var instances = M.FormSelect.init(elems);
+});

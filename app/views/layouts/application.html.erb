@@ -20,7 +20,8 @@
     <div class="nav-wrapper #80cbc4 teal lighten-3">
       <a href="#!" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-      
+     
+     
      <li> <%= link_to "all animals", animals_path %></li>
       <li><% if user_signed_in? %></li>
       <li><%= link_to "Add Post", new_animal_path %></li>
@@ -30,18 +31,15 @@
        <li> <%= link_to "Log in", new_user_session_path %></li>
        <li> <%= link_to "Sign Up", new_user_registration_path %></li>
       <% end %>
-     
-      </ul>
-    </div>
-<%= form_tag(search_page_path, :method => "get",   
-    class: 'navbar-form navbar-left') do %>  
-  <div class="input-group">  
-    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
-    <div class="input-group-btn">  
-      <%= button_tag "search", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+      <li><%= form_tag(search_page_path, :method => "get",    class: 'navbar-form navbar-left') do %>   <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %> </li>
+     <li><div class="input-group-btn">  
+      <%= button_tag "search by Microchip", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
     </div>  
   </div>  
-<% end %>
+<% end %></li>
+      </ul>
+    </div>
 
 
 
@@ -53,6 +51,11 @@
 <div class="container  lighten-2">
     <%= yield %>
   </div>
+
+
+
+
+
 
     <footer class="page-footer #80cbc4 teal lighten-3">
           <div class="container">

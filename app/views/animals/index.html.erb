@@ -12,8 +12,8 @@
  <div class="col s4">
       <div class="card">
         <div class="card-image">
-          <%= image_tag animal.image %>
-          <span class="card-title"><%= animal.title %></span>
+          <%= cl_image_tag animal.image %>
+          <span class="card-title"><%= animal.title %> , <%= animal.status %></span>
         </div>
         <div class="card-content">
           <p> <%= animal.description %></p>
@@ -21,7 +21,7 @@
           <p>  <%= animal.animal_type %>, <%= animal.gender %></p>
         </div>
         <div class="card-action">
-          <a href=<%= animal_path(animal) %>>more</a>
+          <a href=<%= animal_path(animal) %>>Details</a>
         </div>
       </div>
        </div>

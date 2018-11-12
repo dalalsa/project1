@@ -1,32 +1,33 @@
 <div class = "row">
-<div class = "col6"></div>
+<div class = "col s6">
 <%= form_for @animal do |f| %>
 <div>
-  
-
 <%= f.label :title %>
 </div>
+
 <div>
 <%= f.text_field :title  , required: true %>
 </div>
+
 <div>
 <%= f.label :description %>
 </div>
+
 <div>
 <%= f.text_area :description , required: true  %>
 </div>
-<div>
-<%= f.label :image %>
-</div>
-<div>
-<%= f.text_field :image  , required: true %>
-</div>
 
 <div>
-<%= f.label :animal_type %>
+<%= f.label "image " %>
 </div>
 <div>
-<%= f.text_field :animal_type  , required: true %>
+<%= f.file_field "image" %>
+</div>
+
+
+<div>
+  <%= f.label :animal_type , "Type" %>
+  <%= f.select :animal_type, ["cat","dog","rabbit"] %>
 </div>
 
 <div >
@@ -35,35 +36,29 @@
     <%= f.radio_button :gender, "female"  %>
     <%= f.label :gender, "Male", :value => "male" %>
     <%= f.radio_button :gender, "male" , :checked => "female" %>
-  </div>
+</div>
 
 
 <div>
 <%= f.label :dob %>
-</div>
-<div>
-<%= f.text_field :dob  , required: true %>
+<%= f.text_field :dob   %>
 </div>
 
 <div>
 <%= f.label :city %>
-</div>
-<div>
 <%= f.text_field :city  , required: true %>
 </div>
 
 <div>
 <%= f.label :location %>
-</div>
-<div>
 <%= f.text_field :location  , required: true %>
 </div>
 
 <div>
 <%= f.label :status %>
 <%= f.select :status, ['missing', 'found','animals-in-need','for-adoption']%>
-
 </div>
+
 
 
 
@@ -71,4 +66,5 @@
 <%= f.submit %>
 </div>
 <% end %>
-
+</div>
+</div>

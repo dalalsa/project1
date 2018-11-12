@@ -2,5 +2,5 @@
 
     <% @results.each do |result| %>  
         <%= result.title %><br>  
-        <%= image_tag result.image %>
+        <%= cl_image_tag result.image %>
     <% end %>

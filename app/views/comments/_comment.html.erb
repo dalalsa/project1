@@ -1,19 +1,17 @@
-<div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
-              <img src="images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-            </div>
-            <div class="col s10">
-              <span class="black-text">
+
+      
+     
+     <%#= link_to 'Delete', [comment.service, comment],
+                  method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+ <ul class="collection">
+    <li class="collection-item avatar">
+    <div class="circle responsive-img"><%= cl_image_tag current_user.image ,:size => "50x50"%></div>
+         <span class="black-text">
              
           <strong><%= comment.user.email %>:</strong>
           <%= comment.body %>
         </span>
-    </div>
-          </div>
-        </div>
-      </div>
-     <%#= link_to 'Delete', [comment.service, comment],
-                  method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
- 
+      <a href="#!" class="secondary-content"><i class="material-icons">more</i></a>
+    </li>
+    
+  </ul>

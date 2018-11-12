@@ -6,7 +6,9 @@ gem "devise"
 
 gem 'pry'
 gem 'jquery-rails'
-
+gem "cloudinary"
+gem "rest-client", "~> 2.0"
+gem "carrierwave"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
