@@ -1,8 +1,5 @@
-<h1>Animals#index</h1>
-<p>Find me in app/views/animals/index.html.erb</p>
- <div class ="row #84ffff cyan accent-1">
-          <h3 class=""><%= link_to("add new", "/new_animal/missing" ) %></h3>
-</div>
+
+
  
 <% @animals.in_groups_of(3, false).each do |group| %>
      
@@ -13,7 +10,7 @@
       <div class="card">
         <div class="card-image">
           <%= cl_image_tag animal.image %>
-          <span class="card-title"><%= animal.title %> , <%= animal.status %></span>
+          <span class="card-title blue-text text-darken-4"><%= animal.title %> , <%= animal.status %></span>
         </div>
         <div class="card-content">
           <p> <%= animal.description %></p>

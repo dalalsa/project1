@@ -1,20 +1,22 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
-
 
       
     <div class="row">
 
       <div class="col s4">
-       <div class="card small">
+       <div class="card ">
         <div class="card-content">
       
-       <%= @animal.title %>
+       
  <div><%= cl_image_tag  @animal.image , :size => "260x180"%></div>
+ <%= @animal.title %>
+ <p>Description: <%= @animal.description %></p>
  <p>Type: <%= @animal.animal_type %></p>
  <p>Gender: <%= @animal.gender %></p>
  <p>Age: <%= @animal.dob %></p>
-
+ <p>City: <%= @animal.city %></p>
+  <p>Location: <%= @animal.location %></p>
+  <p>Posted by: <%= @animal.user.username %></p>
+  <p>Date: <%= @animal.created_at.strftime "%B %d, %Y"  %></p>
       </div>
       </div>
       </div>
@@ -22,7 +24,8 @@
         <!-- Promo Content 2 goes here -->
    <section class="section comments">
     <div class="container">
-        <h4 class="subtitle is-5"><strong><%= @animal.comments.count %></strong> Comments</h4>
+
+        <h4 class="subtitle is-5"><strong><%=  pluralize @animal.comments.count,"comment" %></strong> </h4>
         <%#= show the user and comment content from comment.html  %>
         <%= render @animal.comments %>
         <div class="comment-form">
@@ -45,4 +48,4 @@
   
 </div>
    
- 
+

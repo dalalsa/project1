@@ -5,13 +5,13 @@
                   method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
  <ul class="collection">
     <li class="collection-item avatar">
-    <div class="circle responsive-img"><%= cl_image_tag current_user.image ,:size => "50x50"%></div>
+    <div class="circle responsive-img"><%= cl_image_tag comment.user.image ,:size => "50x50"%></div>
          <span class="black-text">
-             
-          <strong><%= comment.user.email %>:</strong>
+          <strong><%= link_to(comment.user.username ,user_path(comment.user))%>:</strong>
           <%= comment.body %>
+                <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+
         </span>
-      <a href="#!" class="secondary-content"><i class="material-icons">more</i></a>
     </li>
     
   </ul>
