@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##app name
+Help Animals
+a website that can help report missing animals and search for them , also help finding animals availble for addoption
 
-Things you may want to cover:
+##Featchers
 
-- Ruby version
+- User can sign up and edit his profile
+- User can add new animal
+- User can set animal's status (lost,found,for adoption,in need)
+- User can browse all animals' catogries
+- User can comment on others posts
 
-- System dependencies
+## Demo
 
-- Configuration
+[link for the app on Herokuapp](https://vast-shore-67871.herokuapp.com)
+##database tabels
+Three models User , Animal , Comments
 
-- Database creation
+## Feachers to add
 
-- Database initialization
+- improving the search system
 
-- How to run the test suite
+## cridits
 
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+- Devise for User Model in Rails
+- Cloudinary for files mangments
+- Herokuapp
+- [Materialize](https://materializecss.com/about.html)
+- [Images from](https://pngtree.com/free-vectors">pngtree.com)
+- [and](https://www.freepik.com/free-vector/set-of-logos-with-orange-details_948094.htm)

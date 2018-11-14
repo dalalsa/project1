@@ -1,6 +1,12 @@
 class AnimalsController < ApplicationController
   def index
-    @animals = Animal.where(status: params[:search])
+    if params[:location]
+      @animals = Animal.where("city ILIKE '%#{params[:location]}%'")
+      # Whatever the user typed in, go through all Animals. If params[:location] appears somewhere in the current animals city field,
+      # Include that animal in the results. This is also case insensitive ("riyadh" == "RIYADH" because of ILIKE)
+    else
+      @animals = Animal.where(status: params[:search])
+    end
   end
 
   def show
@@ -22,18 +28,29 @@ class AnimalsController < ApplicationController
   end
 
   def adopted
+    params[:id]
     # Find the animal with the id of params[:id]
- @animal = Animal.find_by(id: params[:id])
+    @animal = Animal.find_by(id: params[:id])
+
     @animal.update(status: "adopted")
+
     @animal.save
+
     # Change the status to "Adopted" on that animal
 
     # Save the animal
 
   end
 
+  def returned
+    params[:id]
+    @animal = Animal.find_by(id: params[:id])
+    @animal.update(status: "returned")
+    @animal.save
+
+  end
+
   def update
-   
   end
 
   private

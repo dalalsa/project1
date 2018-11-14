@@ -10,6 +10,12 @@ class CommentsController < ApplicationController
     redirect_to animal_path(@animal)
   end
 
+  def destroy
+    @comment = Comment.find_by(id: params[:id])
+    @comment.destroy
+    redirect_to animal_path(@comment.animal)
+  end
+
   private
 
   def comment_params

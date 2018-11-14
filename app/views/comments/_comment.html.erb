@@ -9,9 +9,11 @@
          <span class="black-text">
           <strong><%= link_to(comment.user.username ,user_path(comment.user))%>:</strong>
           <%= comment.body %>
-                <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+      <% if current_user == comment.user %> 
+ <%= link_to 'Delete', [comment.animal, comment],method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+                <% end %>
 
         </span>
     </li>
-    
+ 
   </ul>

@@ -12,14 +12,21 @@
  <p>Description: <%= @animal.description %></p>
  <p>Type: <%= @animal.animal_type %></p>
  <p>Gender: <%= @animal.gender %></p>
- <p>Age: <%= @animal.dob %></p>
  <p>City: <%= @animal.city %></p>
   <p>Location: <%= @animal.location %></p>
-  <p>Posted by: <%= @animal.user.username %></p>
-  <p>Date: <%= @animal.created_at.strftime "%B %d, %Y"  %></p>
+  <p>Posted by: <%=  link_to @animal.user.username ,user_path(@animal.user)%></p>
+  <p>Posted Date: <%= @animal.created_at.strftime "%B %d, %Y"  %></p>
       </div>
       </div>
+    <% if current_user &&current_user == @animal.user%> 
+
+          <%= button_to "Update status to adopted", "/animals/#{params[:id]}/adopted", method: :put ,class:"waves-effect waves-light btn",data: { confirm: 'Are you sure you want to change animal status to adopted?' }%>
+<br>
+<%= button_to "Update status to returned", "/animals/#{params[:id]}/returned", method: :put ,class:"waves-effect waves-light btn",data: { confirm: 'Are you sure you want to change animal status to returned?' }%>
+<% end %>
+
       </div>
+      
       <div class="col s8">
         <!-- Promo Content 2 goes here -->
    <section class="section comments">
@@ -40,12 +47,8 @@
 
 
 
-
         
-<%= link_to "Update status to adopted", "/animals/#{params[:id]}/adopted", method: :put %>
-<%= link_to "Update status to returned", "/animals/#{params[:id]}/returned", method: :put %>
 
-  
 </div>
    
 

@@ -10,9 +10,8 @@
      
   </ul>
  </div>
-        <div class="col s4"><h4>empty</h4></div>
-      <div class="col s8">
-      <h4>User's Pets</h4>
+      <div class="col s12">
+      <h5>All Posts by the user:</h5>
 <% @user.animals.in_groups_of(3, false).each do |group| %>
      
 <div class="row">
