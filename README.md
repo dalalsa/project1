@@ -1,10 +1,11 @@
 # README
 
-##app name
+## App
+
 Help Animals
 a website that can help report missing animals and search for them , also help finding animals availble for addoption
 
-##Featchers
+## Features
 
 - User can sign up and edit his profile
 - User can add new animal
@@ -15,18 +16,20 @@ a website that can help report missing animals and search for them , also help f
 ## Demo
 
 [link for the app on Herokuapp](https://vast-shore-67871.herokuapp.com)
-##database tabels
+
+## database tabels
+
 Three models User , Animal , Comments
 
-## Feachers to add
+## More Features to add later
 
-- improving the search system
+- Improving the search system
 
-## cridits
+## Credits
 
 - Devise for User Model in Rails
 - Cloudinary for files mangments
-- Herokuapp
+- Herokuapp for hosting the app online
 - [Materialize](https://materializecss.com/about.html)
-- [Images from](https://pngtree.com/free-vectors">pngtree.com)
-- [and](https://www.freepik.com/free-vector/set-of-logos-with-orange-details_948094.htm)
+- [Images from pngtree.com](https://pngtree.com/free-vectors">pngtree.com)
+- [and freepik.com](https://www.freepik.com/free-vector/set-of-logos-with-orange-details_948094.htm)
