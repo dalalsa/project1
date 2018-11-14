@@ -33,3 +33,4 @@ Three models User , Animal , Comments
 - [Materialize](https://materializecss.com/about.html)
 - [Images from pngtree.com](https://pngtree.com/free-vectors">pngtree.com)
 - [and freepik.com](https://www.freepik.com/free-vector/set-of-logos-with-orange-details_948094.htm)
+- Special thanks to our instructors Jack Jeffress ,Trevor Preston and Moath
