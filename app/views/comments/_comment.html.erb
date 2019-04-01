@@ -10,7 +10,7 @@
           <strong><%= link_to(comment.user.username ,user_path(comment.user))%>:</strong>
           <%= comment.body %>
       <% if current_user == comment.user %> 
- <%= link_to 'Delete', [comment.animal, comment],method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+ <%= link_to t('site.global.delete'), [comment.animal, comment],method: :delete, class: "button is-danger", data: { confirm: t('site.global.are_you_sure') } %>
                 <% end %>
 
         </span>

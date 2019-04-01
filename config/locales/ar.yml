@@ -1,0 +1,63 @@
+ar:
+  pages:
+    home:
+      hello: "مرحبا!"
+      new_animal: 'اضافة حيوان'
+      hello: "Welcome!"
+  layouts:
+    application:
+      logo: 'ساعد الحيوانات'
+      new_animal: "تبليغ عن حيوان"
+      all_animals: "تصفح الكل"
+      sign_up: 'انضم للموقع'
+      log_in: 'تسجيل الدخول'
+      log_out: 'تسجيل الخروج'
+  animals:
+    form: 
+      female: 'أنثى'
+      male: 'ذكر'
+      choose: 'ماهي حالة الحيوان'
+    new:
+      create_new_post: "أنشئ مشاركة جديدة"
+    show:
+      description: "التفاصيل"
+      type: "النوع"
+      city: "المدينة"
+      location: "المكان"
+      gender: "الجنس"
+      posted_by: "بواسطة"
+      posted_date: "وقت الارسال"
+  activerecord:
+    models:
+      animal: 'حيوان'
+      comment: 'تعليق'
+    attributes:
+      animal:
+        title: 'العنوان'
+        city: 'المدينة'
+        description: "الوصف"
+        animal_type: "النوع"
+        image: "الصورة"
+        gender: "الجنس" 
+        location: "الموقع"
+      comment: 
+        body: 'التعليق'
+  site:
+    global:
+      missing: "مفقود"
+      found: "معثور عليه"
+      animals-in-need: "بحاجة لمساعدة"
+      for_adoption: "للتبني"
+      in: "في"
+      details: "التفاصيل"
+      delete: 'حذف'
+      are_you_sure: 'هل أنت متأكد؟'
+      leave_a_reply: "اكتب تعليق"
+      comment: 'تعليق'
+      post: 'المشاركة'
+      posts: 'المشاركات'
+      cat: 'قطة'
+      dog: 'كلب'
+      rabbit: 'أرنب'
+      bird: 'طائر'
+      other: 'أخرى'

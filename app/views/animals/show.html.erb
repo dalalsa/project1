@@ -9,20 +9,20 @@
        
  <div><%= cl_image_tag  @animal.image , :size => "260x180"%></div>
  <%= @animal.title %>
- <p>Description: <%= @animal.description %></p>
- <p>Type: <%= @animal.animal_type %></p>
- <p>Gender: <%= @animal.gender %></p>
- <p>City: <%= @animal.city %></p>
-  <p>Location: <%= @animal.location %></p>
-  <p>Posted by: <%=  link_to @animal.user.username ,user_path(@animal.user)%></p>
-  <p>Posted Date: <%= @animal.created_at.strftime "%B %d, %Y"  %></p>
+ <p> <%=t(".description")%>:<%= @animal.description %></p>
+ <p><%=t(".type")%>:<%= @animal.animal_type %></p>
+ <p><%=t(".gender")%>:<%= @animal.gender %></p>
+ <p><%=t(".city")%>:<%= @animal.city %></p>
+  <p><%=t(".location")%>: <%= @animal.location %></p>
+  <p><%=t(".posted_by")%> :<%=  link_to @animal.user.username ,user_path(@animal.user)%></p>
+  <p><%=t(".posted_date")%>:<%= @animal.created_at.strftime "%B %d, %Y"  %></p>
       </div>
       </div>
     <% if current_user &&current_user == @animal.user%> 
 
-          <%= button_to "Update status to adopted", "/animals/#{params[:id]}/adopted", method: :put ,class:"waves-effect waves-light btn",data: { confirm: 'Are you sure you want to change animal status to adopted?' }%>
+          <%= button_to "حدث الحالة الى : تم التبني", "/animals/#{params[:id]}/adopted", method: :put ,class:"waves-effect waves-light btn",data: { confirm: ' هل أنت متأكد من تحويل الحالة الى: تم التبني' }%>
 <br>
-<%= button_to "Update status to returned", "/animals/#{params[:id]}/returned", method: :put ,class:"waves-effect waves-light btn",data: { confirm: 'Are you sure you want to change animal status to returned?' }%>
+<%= button_to "حدث الحالة الى : تم الايجاد", "/animals/#{params[:id]}/returned", method: :put ,class:"waves-effect waves-light btn",data: { confirm: 'هل أنت متأكد من تحويل الحالة الى: تم الايجاد' }%>
 <% end %>
 
       </div>
@@ -32,12 +32,12 @@
    <section class="section comments">
     <div class="container">
 
-        <h4 class="subtitle is-5"><strong><%=  pluralize @animal.comments.count,"comment" %></strong> </h4>
+        <h4 class="subtitle is-5"> </h4>
         <%#= show the user and comment content from comment.html  %>
         <%= render @animal.comments %>
         <div class="comment-form">
             <hr />
-            <p class="subtitle is-3">Leave a reply</p>
+            <p class="subtitle is-3"><%=t('site.global.leave_a_reply')%></p>
              <%= render 'comments/form' %>
         </div>
     </div>

@@ -18,31 +18,28 @@
 </div>
 
 <div>
-<%= f.label "image " %>
+<%= f.label :image %>
 </div>
 <div>
-<%= f.file_field "image" %>
+<%= f.file_field :image %>
 </div>
 
 
 <div>
-  <%= f.label :animal_type , "Type" %>
-  <%= f.select :animal_type, ["cat","dog","rabbit"] %>
+  <%= f.label :animal_type  %>
+  <%= f.select :animal_type, [[t('site.global.cat'),'cat'],[t('site.global.dog'),'dog'],[t('site.global.rabbit'),'rabbit'],[t('site.global.bird'),'bird'],[t('site.global.other'),'other']] %>
 </div>
 
 <div >
     <%= f.label :gender %><br />
-    <%= f.label :gender, "Female", :value => "female"  %>
+    <%= f.label :gender, t(".female"), :value => "female"  %>
     <%= f.radio_button :gender, "female"  %>
-    <%= f.label :gender, "Male", :value => "male" %>
+    <%= f.label :gender, t(".male"), :value => "male" %>
     <%= f.radio_button :gender, "male" , :checked => "female" %>
 </div>
 
 
-<div>
-<%= f.label :dob %>
-<%= f.text_field :dob   %>
-</div>
+
 
 <div>
 <%= f.label :city %>
@@ -55,8 +52,8 @@
 </div>
 
 <div>
-<%= f.label "choose the animal status:"%>
-<%= f.select :status, ['missing', 'found','animals-in-need','for-adoption']%>
+<%= f.label t(".choose")%>
+<%= f.select :status, [[t('site.global.missing'),'missing'], [t('site.global.found'),'found'],[t('site.global.animals-in-need'),'animals-in-need'],[t('site.global.for_adoption'),'for_adoption']]%>
 </div>
 
 

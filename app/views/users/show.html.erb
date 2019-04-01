@@ -11,7 +11,7 @@
   </ul>
  </div>
       <div class="col s12">
-      <h5>All Posts by the user:</h5>
+      <h5><%=t('site.global.posts')%></h5>
 <% @user.animals.in_groups_of(3, false).each do |group| %>
      
 <div class="row">
@@ -28,7 +28,7 @@
           <p>  <%= animal.animal_type %>, <%= animal.gender %></p>
         </div>
         <div class="card-action">
-          <a href=<%= animal_path(animal) %>>Details</a>
+          <a href=<%= animal_path(animal) %>><%=t('site.global.details')%></a>
         </div>
       </div>
        </div>

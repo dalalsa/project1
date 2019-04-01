@@ -15,19 +15,19 @@
   
   <nav>
     <div class="nav-wrapper #80cbc4 teal lighten-3">
-      <a href="/" class="brand-logo">Help Animals</a>
+      <a href="/" class="brand-logo"><%= t(".logo")%></a>
       <ul class="right hide-on-med-and-down">
      
      
-     <li> <%= link_to "all animals", animals_path %></li>
+     <li> <%= link_to t(".all_animals"), animals_path %></li>
       <li><% if user_signed_in? %></li>
-      <li><%= link_to "Report New Animal", new_animal_path %></li>
+      <li><%= link_to t(".new_animal"), new_animal_path %></li>
 
       <li><%= link_to current_user.email, user_path(current_user) %></li>
-       <li> <%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+       <li> <%= link_to t(".log_out"), destroy_user_session_path, method: :delete %></li>
       <% else %>
-       <li> <%= link_to "Log in", new_user_session_path %></li>
-       <li> <%= link_to "Sign Up", new_user_registration_path %></li>
+       <li> <%= link_to t(".log_in"), new_user_session_path %></li>
+       <li> <%= link_to t('.sign_up'), new_user_registration_path %></li>
       <% end %>
       <li><%= form_tag(search_page_path, :method => "get",    class: 'navbar-form navbar-left') do %>   <div class="input-group">  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %> </li>

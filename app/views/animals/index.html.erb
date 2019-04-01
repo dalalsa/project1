@@ -16,11 +16,11 @@
         </div>
         <div class="card-content">
           <p> <%= animal.description %></p>
-          <p> in <%= animal.city %></p>
+          <p> <%=t("site.global.in")%><%= animal.city %></p>
           <p>  <%= animal.animal_type %>, <%= animal.gender %></p>
         </div>
         <div class="card-action">
-          <a href=<%= animal_path(animal) %>>Details</a>
+          <a href=<%= animal_path(animal) %>><%=t("site.global.details")%></a>
         </div>
       </div>
        </div>

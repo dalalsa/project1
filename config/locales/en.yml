@@ -28,6 +28,25 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  pages:
+    home:
+      hello: "Welcome!"
+  layouts:
+    application:
+      new_animal: 'New animal'
+  animals:
+    form: 
+      female: 'أنثى'
+      male: 'ذكر'
+      choose: 'ماهي حالة الحيوان'
+    new:
+      create_new_post: "Create New Post"
+en:
+  activerecord:
+    models:
+      animal: 'Animal'
+    attributes:
+      animal:
+        title: 'Title'
+        city: 'Cityn'
