@@ -1,10 +1,8 @@
 
 
  
-   
 
  <div class="row teal lighten-5">
-     
       <div class ="row">
       <div class="col s12 center">
   
@@ -14,8 +12,12 @@
     <div class="col s6  ">
     <div class="card white" >
      <div class="card-content white-text center">
-     <%= image_tag 'missing.png' %>
-           <h5> <%=  link_to 'enter', "/all_animals/missing" %></h5>
+  
+     <span style="font-size:7em; color: teal;">
+   <i class="fas fa-paw"></i>
+</span>
+           <h5> <%=  link_to t('site.global.missing'), "/all_animals/missing" %></h5>
+            
         </div>
       </div>
     </div>
@@ -24,9 +26,10 @@
     <div class="card white">
      <div class="card-content white-text center">
          
-     <%= image_tag 'found.png' %>
-
-           <h5> <%=  link_to 'enter', "/all_animals/found" %></h5>
+    <span style="font-size:7em; color: teal;">
+   <i class="fas fa-paw"></i>
+</span>
+           <h5> <%=  link_to t('site.global.found'), "/all_animals/found" %></h5>
         </div>
       </div>
     </div>
@@ -36,9 +39,10 @@
      <div class="col s6 ">
     <div class="card white">
      <div class="card-content white-text center">
-          <%= image_tag 'adopt.png' %>
-
-           <h5> <%=  link_to "enter",  "/all_animals/for-adoption" %></h5>
+<span style="font-size:7em; color: teal;">
+   <i class="fas fa-paw"></i>
+</span>
+           <h5> <%=  link_to t("site.global.for_adoption"),  "/all_animals/for-adoption" %></h5>
         </div>
       </div>
     </div>
@@ -46,8 +50,10 @@
      <div class="col s6 ">
     <div class="card white">
      <div class="card-content white-text center">
-      <%= image_tag 'in-need.png' %>
-           <h5> <%=  link_to "enter",  "/all_animals/animals-in-need"%></h5>
+      <span style="font-size:7em; color: teal;">
+   <i class="fas fa-paw"></i>
+</span>
+           <h5> <%=  link_to t("site.global.animals-in-need"),  "/all_animals/animals-in-need"%></h5>
         </div>
       </div>
     </div>

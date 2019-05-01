@@ -13,6 +13,8 @@ gem "carrierwave"
 # gem for localazation 
 gem 'rails-i18n'
 gem 'devise-i18n'
+# gem for share buttons
+gem 'social-share-button', '~> 0.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record

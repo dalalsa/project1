@@ -15,6 +15,8 @@
 //= require jquery
 //= require turbolinks
 //= require_tree .
+//= require jquery_ujs
+//= require social-share-button
 
 $(document).on("turbolinks:load", function() {
   console.log("jquery connected!");
